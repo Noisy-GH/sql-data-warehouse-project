@@ -1,6 +1,16 @@
-/* CREATE TABLES
+/* 
+=========================================================
+TABLES CREATION
+=========================================================
+Script Purpose:
+Criar tables, tomando o cuidado de observar antes se já existe alguma com o mesmo nome.
+Se já existe, dropamos.
+=========================================================
+Notas:
 ATENÇÃO PARA OS TIPOS E A NOMENCLATURA
-COLOCAR OS NOMES DAS SOURCES NO COMEÇO DE CADA TABLE APÓS O NOME DO DATABASE (AQUI CRM OU ERP*/
+COLOCAR OS NOMES DAS SOURCES NO COMEÇO DE CADA TABLE APÓS O NOME DO DATABASE (AQUI CRM OU ERP)
+=========================================================
+*/
 
 DROP TABLE if EXISTS DataWareHouse.crm_cust_info;
 
