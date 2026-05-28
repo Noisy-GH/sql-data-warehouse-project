@@ -32,9 +32,9 @@ SET @total_start_time = NOW();
 -- CRM_CUST_INFO
 SET @start_time = NOW();
 
-Truncate table DataWareHouse.crm_cust_info;
+Truncate table DataWareHouse.bronze_crm_cust_info;
 LOAD DATA LOCAL INFILE '/Users/felipemonteiro/SqlFiles/CURSO_SQL_30H/sql-data-warehouse-project/datasets/source_crm/cust_info.csv'
-into table DataWareHouse.crm_cust_info
+into table DataWareHouse.bronze_crm_cust_info
 CHARACTER SET utf8mb4
 fields terminated by ','
 LINES TERMINATED BY '\r\n'
@@ -57,9 +57,9 @@ SELECT
 
 SET @start_time = NOW();
 
-Truncate table DataWareHouse.crm_prd_info;
+Truncate table DataWareHouse.bronze_crm_prd_info;
 LOAD DATA LOCAL INFILE '/Users/felipemonteiro/SqlFiles/CURSO_SQL_30H/sql-data-warehouse-project/datasets/source_crm/prd_info.csv'
-into table DataWareHouse.crm_prd_info
+into table DataWareHouse.bronze_crm_prd_info
 CHARACTER SET utf8mb4
 fields terminated by ','
 LINES TERMINATED BY '\r\n'
@@ -83,9 +83,9 @@ SELECT
 
 SET @start_time = NOW();
 
-truncate table DataWareHouse.crm_sales_details;
+truncate table DataWareHouse.bronze_crm_sales_details;
 LOAD DATA LOCAL INFILE '/Users/felipemonteiro/SqlFiles/CURSO_SQL_30H/sql-data-warehouse-project/datasets/source_crm/sales_details.csv'
-into table DataWareHouse.crm_sales_details
+into table DataWareHouse.bronze_crm_sales_details
 CHARACTER SET utf8mb4
 fields terminated by ','
 LINES TERMINATED BY '\r\n'
@@ -106,9 +106,9 @@ SELECT
 
 -- ERP_CUST_AZ12
 SET @start_time = NOW();
-truncate table DataWareHouse.erp_cust_az12;
+truncate table DataWareHouse.bronze_erp_cust_az12;
 LOAD DATA LOCAL INFILE '/Users/felipemonteiro/SqlFiles/CURSO_SQL_30H/sql-data-warehouse-project/datasets/source_erp/cust_az12.csv'
-into table DataWareHouse.erp_cust_az12
+into table DataWareHouse.bronze_erp_cust_az12
 CHARACTER SET utf8mb4
 fields terminated by ','
 LINES TERMINATED BY '\r\n'
@@ -129,9 +129,9 @@ SELECT
 -- ERP_LOC_A101
 SET @start_time = NOW();
 
-truncate table DataWareHouse.erp_loc_a101;
+truncate table DataWareHouse.bronze_erp_loc_a101;
 LOAD DATA LOCAL INFILE '/Users/felipemonteiro/SqlFiles/CURSO_SQL_30H/sql-data-warehouse-project/datasets/source_erp/loc_a101.csv'
-into table DataWareHouse.erp_loc_a101
+into table DataWareHouse.bronze_erp_loc_a101
 CHARACTER SET utf8mb4
 fields terminated by ','
 LINES TERMINATED BY '\r\n'
@@ -151,9 +151,9 @@ SELECT
 -- ERP_PX_CAT_G1V2
 SET @start_time = NOW();
 
-truncate table DataWareHouse.erp_px_cat_g1v2;
+truncate table DataWareHouse.bronze_erp_px_cat_g1v2;
 LOAD DATA LOCAL INFILE '/Users/felipemonteiro/SqlFiles/CURSO_SQL_30H/sql-data-warehouse-project/datasets/source_erp/px_cat_g1v2.csv'
-into table DataWareHouse.erp_px_cat_g1v2
+into table DataWareHouse.bronze_erp_px_cat_g1v2
 CHARACTER SET utf8mb4
 fields terminated by ','
 LINES TERMINATED BY '\r\n'
